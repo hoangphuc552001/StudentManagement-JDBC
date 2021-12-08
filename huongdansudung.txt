@@ -1,0 +1,23 @@
+﻿Hướng dẫn sử dụng student management app:
+- Khi đăng nhập lần đầu, app sẽ hiển thị màn hình cho user đăng nhập bao gồm: Server, database name, username, password để user kết nối đến server.
+- Khi đăng nhập thành công thì sẽ tạo ra 1 file config.txt trên cùng thư mục để lưu lịch sử user đã nhập. Khi tồn tại file config.txt, user không cần đăng nhập nữa và sẽ được vào màn hình menu.
+- Màn hình menu bao gồm:
+  + Add Student: thêm sinh viên
+	. Hệ thống sẽ random ra id và user sẽ thêm sinh viên bằng những thông tin khác(name,grade,image,address,note)
+	. Contrainst: grade nằm từ [0,4], image là file tồn tại thực trong ổ đĩa của user
+	. Sau khi đăng nhập, user nhấn Cancel để quay lại Menu
+  + Delete Student: xoá sinh viên
+	. Hệ thống thể hiện tất cả sinh viên trong hệ thống cho user lựa chọn để xoá
+	. User nhập id để xoá sinh viên, nếu nhập sai hệ thống sẽ báo và user được nhập lại. Nếu user nhập đúng, hệ thống sẽ báo 1 thông báo để chắc chắn sinh viên mà user muốn xoá
+  + Update Student: cập nhật sinh viên
+	. Hệ thống thể hiện tất cả sinh viên trong hệ thống cho user lựa chọn để cập nhật
+	. User nhập id để xoá sinh viên, nếu nhập sai hệ thống sẽ báo và user được nhập lại. Nếu user nhập đúng, hệ thống sẽ thể hiện thông tin của user đó để người dùng có thể cập nhật. Sau khi cập nhật, thông tin sinh viên sẽ thể hiện bên ở bảng bên
+	. Button Cancel dùng để huỷ cập nhật sinh viên vừa nhập, Button Back để quay về Menu
+  + View Student: Xem danh sách sinh viên
+	. Bao gồm 2 radio box cho user lựa chọn filter theo điểm hoặc id
+  + Export: 
+	. User nhập tên file theo định dạng: file_name.csv để export và file sẽ hiện ở folder FileCSV. Nếu nhập file đã tồn tại, hệ thống sẽ hỏi user có muốn ghi đè hay không hoặc tạo lại bằng 1 file mới
+  + Import:
+	. User click vào tên file tồn tại ở folder FileCSV để import vào database 
+
+run cmd: java -jar student.jar

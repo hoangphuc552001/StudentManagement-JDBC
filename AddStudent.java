@@ -26,7 +26,10 @@ public class AddStudent extends JFrame implements ActionListener {
         jLineID.add(Box.createRigidArea(new Dimension(41, 0)));
         jTextFieldid = new JTextField();
         jTextFieldid.setPreferredSize(new Dimension(0, 20));
-        jTextFieldid.setText(ConnectToDatabase.idGetter());
+        String idGetter=ConnectToDatabase.idGetter();
+        if (idGetter.equals(""))
+            jTextFieldid.setText("19121000");
+        jTextFieldid.setText(idGetter);
         jTextFieldid.setEditable(false);
         jLineID.add(ID);
         jLineID.add(Box.createRigidArea(new Dimension(30, 0)));

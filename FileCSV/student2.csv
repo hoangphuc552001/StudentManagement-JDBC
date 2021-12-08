@@ -1,0 +1,14 @@
+ID,StudentName,StudentID,GPA,Image,Address,Note
+1,Le Hoang Phuc,12312333,3.4,D://template.txt,Ba Hom,CLC
+2,NVBB,19113333,2,D://template.txt,NVC,DT
+3,NVC,19122334,3.4,D://template.txt,NVC,CC
+4,NVA,19127059,4,D://template.txt,NVC,CLC
+5,NVD,19127122,3.2,D://test.png,NVC,CLC
+6,NVE,19127123,3.9,D://template.txt,NVC,CLC
+7,Duong Vu,19127125,3.2,D://template.txt,DBL,NVC
+8,Tien Quan,19127233,3.1,D://template.txt,DBL,CLC
+9,Canh Toan,19127234,2,D://template.txt,DBL,CLC
+10,Huy,19127235,3.2,D://template.txt,Ba Hom,CLC
+11,Hieu,19127236,3.2,D://template.txt,Ba Hom,CLC
+12,Phuc,19127237,3.1,D://template.txt,BH,CLC
+13,Phuu,19127238,3.1,D://template.txt,NVC,CLC

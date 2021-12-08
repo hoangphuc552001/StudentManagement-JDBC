@@ -13,8 +13,8 @@ public class ExportCSV extends JFrame {
             StudentList studentList=new StudentList();
             String[][] data=ConnectToDatabase.getList();
             for (int i=0;i<data.length;i++){
-                Student st=new Student(data[i][1],
-                        data[i][0],Float.valueOf(data[i][2]).floatValue(),data[i][3],data[i][4],data[i][5]);
+                Student st=new Student(data[i][0],
+                        data[i][1],Float.valueOf(data[i][2]).floatValue(),data[i][3],data[i][4],data[i][5]);
                 studentList.addStudent(st);
             }
             if (f.exists()&&f.isFile()){

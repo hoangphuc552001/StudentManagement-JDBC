@@ -43,7 +43,7 @@ public class ImportCSV extends JFrame implements ActionListener {
             @Override
             public void valueChanged(ListSelectionEvent e) {
                 if (!list.getValueIsAdjusting()) {
-                    int a=JOptionPane.showConfirmDialog(null,"Are you sure to export file "+
+                    int a=JOptionPane.showConfirmDialog(null,"Are you sure to import file "+
                             list.getSelectedValue()+"?");
                     if(a==JOptionPane.YES_OPTION){
                         StudentList studentList=new StudentList();

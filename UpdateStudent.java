@@ -3,6 +3,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 
 public class UpdateStudent extends JFrame implements ActionListener {
     JButton ok, btnOK, btnCancel, btnBack;
@@ -134,14 +135,25 @@ public class UpdateStudent extends JFrame implements ActionListener {
         botRealPan.add(Box.createRigidArea(new Dimension(0, 10)));
         botPanel.setAlignmentX(CENTER_ALIGNMENT);
         //--------
+        JPanel jPanel=new JPanel();
+        jPanel.setAlignmentX(CENTER_ALIGNMENT);
+        String[][] data=ConnectToDatabase.getList();
+        String[] column={"ID","Name","Grade","Image","Address","Notes"};
+        DefaultTableModel model = new DefaultTableModel(data, column);
+        JTable jtable=new JTable(model);
+        JScrollPane sp = new JScrollPane(jtable);
+        jPanel.setLayout(new BoxLayout(jPanel, BoxLayout.LINE_AXIS));
+        jPanel.add(sp);
+        //
         con.add(jpTop, BorderLayout.PAGE_START);
         con.add(jTopTop, BorderLayout.CENTER);
         con.add(botRealPan, BorderLayout.PAGE_END);
+        con.add(jPanel,BorderLayout.LINE_END);
         // Setting JFrame
         this.setTitle("Update Student");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setVisible(true);
-        this.setSize(new Dimension(450, 550));
+        this.setSize(new Dimension(800, 550));
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width / 2 - this.getSize().width / 2, dim.height / 2 - this.getSize().height / 2);
     }
